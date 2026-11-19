@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Travel Explorer</title>
+<style>
+  body{ font-family: Arial; margin: 0; background: #f8f9fa; }
+  nav{
+    background: #0b2239; color: white;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 30px;
+  }
+  nav span{ color: #ff7a18; }
+  nav a{ color: white; text-decoration: none; margin-left: 18px; }
+  nav a:hover{ color: #ff7a18; }
+  button{
+    background: #ff7a18; color: white; border: none;
+    padding: 10px 20px; border-radius: 20px; cursor: pointer;
+    transition: 0.3s;
+  }
+  button:hover{ background: #e85d00; transform: scale(1.05); }
+  .title{ text-align: center; color: #0b2239; margin-top: 40px; }
+
+  .home{
+    height: 400px;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(32, 24, 171); text-align: center;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+  }
+  .home h1{ font-size: 45px; }
+
+  .flex-container{
+    display: flex; justify-content: center;
+    gap: 20px; flex-wrap: wrap; padding: 20px;
+  }
+  .grid-container{
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px; padding: 20px;
+  }
+  .card{
+    background: white; border-radius: 12px;
+    padding: 15px; text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+  }
+  .card:hover{ transform: translateY(-8px); }
+  .card img{ width: 100%; height: 160px; object-fit: cover; border-radius: 10px; }
+  .contact{ background: #eee; text-align: center; padding: 30px; margin-top: 30px; }
+  footer{ background: #0b2239; color: white; text-align: center; padding: 15px; }
+
+  @media(max-width: 700px){
+    .grid-container{ grid-template-columns: 1fr; }
+    nav{ flex-direction: column; gap: 10px; }
+    .home h1{ font-size: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <h3>Travel<span>Explorer</span></h3>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#packages">Packages</a>
+    <a href="#adventure">Adventure</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button>Book Now</button>
+</nav>
+
+<div class="home" id="home">
+  <h1>Explore The World</h1>
+  <p>Best destinations, best packages, best memories.</p>
+  <button>Explore Now</button>
+</div>
+
+<h2 class="title">Popular Destinations</h2>
+<div class="flex-container" id="destinations">
+  <div class="card">
+    <img src="bali.jpg">
+    <h3>Bali</h3>
+    <p>Beaches and temples</p>
+    <p><b>Rs. 49,999</b></p>
+  </div>
+  <div class="card">
+    <img src="paris.jpg">
+    <h3>Paris</h3>
+    <p>Eiffel Tower</p>
+    <p><b>Rs. 89,999</b></p>
+  </div>
+  <div class="card">
+    <img src="manali.jpg">
+    <h3>Manali</h3>
+    <p>Snow mountains</p>
+    <p><b>Rs. 12,999</b></p>
+  </div>
+</div>
+
+<h2 class="title">Tour Packages</h2>
+<div class="grid-container" id="packages">
+  <div class="card"><h3>Beach Trip - 5 Days</h3><p>Goa + Bali</p><p><b>Rs. 29,999</b></p><button>Book</button></div>
+  <div class="card"><h3>Mountain Trip - 7 Days</h3><p>Manali + Leh</p><p><b>Rs. 24,999</b></p><button>Book</button></div>
+  <div class="card"><h3>Family Trip - 6 Days</h3><p>Dubai + Singapore</p><p><b>Rs. 79,999</b></p><button>Book</button></div>
+</div>
+
+<h2 class="title">Adventure Activities</h2>
+<div class="flex-container" id="adventure">
+  <div class="card"><h3>Paragliding</h3><p>Manali</p></div>
+  <div class="card"><h3>Scuba Diving</h3><p>Andaman</p></div>
+  <div class="card"><h3>River Rafting</h3><p>Rishikesh</p></div>
+</div>
+
+<h2 class="title">Why Choose Us</h2>
+<div class="flex-container">
+  <div class="card"><h3>Best Price</h3><p>No hidden charges</p></div>
+  <div class="card"><h3>Safe Travel</h3><p>24/7 Support</p></div>
+  <div class="card"><h3>Happy Travellers</h3><p>50,000+ Customers</p></div>
+</div>
+
+<div class="contact" id="contact">
+  <h2>Contact Us</h2>
+  <p>Phone: 98765 43210</p>
+  <p>Email: hello@travelexplorer.com</p>
+  <p>Trichy, Tamil Nadu</p>
+</div>
+
+<footer>© 2026 Travel Explorer</footer>
+</body>
+</html>
